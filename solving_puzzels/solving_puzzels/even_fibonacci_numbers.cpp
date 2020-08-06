@@ -5,9 +5,16 @@
 By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.*/
 
 void even_fibonacci_numbers() {
-	
+	int n1 = 1, n2 = 2;
+	int result_fib = 0, sum_even = 2;
+	while (result_fib < 4000000) {
+		result_fib = n1 + n2;
+		n1 = n2;
+		n2 = result_fib;
+		if (result_fib % 2 == 0) {
+			sum_even += result_fib;
+		}
+	}
+	cout << sum_even;
 }
 
-void fibbonacci(int first, int second) {
-
-}
